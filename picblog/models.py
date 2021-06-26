@@ -5,7 +5,6 @@ from django.urls import reverse
 class Post(models.Model):
     title= models.CharField(max_length=255)
     author= models.ForeignKey(User, on_delete=models.CASCADE)
-    answer = models.CharField(max_length=255, null=True)
     body = models.TextField()
     header_image = models.ImageField(null=True, blank=True, upload_to="images/")
 
